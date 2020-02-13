@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>welcome</title>
+</head>
+<body>
+<div th:replace="fragments/header :: header">...</div>
+<h3>Welcome to springboot</h3>
+<form action="/files/save" th:action="@{/files/save}" method="post" enctype="multipart/form-data" >
+    <br>
+    <br>文件上传：
+
+    <input type="file" id="file" name="file" multiple/>
+    <br>
+    <input type="submit" value="提交">
+</form>
+
+
+<div th:replace="fragments/footer :: footer">...</div>
+
+</body>
+
+</html>
