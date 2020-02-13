@@ -1,134 +1,32 @@
-server:
-  port: 8078
-  servlet:
-    context-path: /charity
-
-
 spring:
-  application:
-    name: hwagain-mail
   profiles:
     active: product
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://192.168.68.204:3306/aa?createDatabaseIfNotExist=true&useSSL=true&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&autoReconnect=true&failOverReadOnly=false&serverTimezone=Asia/Shanghai
-    username: sit
-    password: abc-123
+    url: jdbc:mysql://43.247.68.17:3306/sq_8888xin?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    username: sq_8888xin
+    password: bbx0010
   jpa:
     hibernate:
-      ddl-auto: none
+      ddl-auto: update
     show-sql: true
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL5Dialect
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
-    time-zone: GMT+8
+    time-zone: UTC
 
+  mvc:
+    view:
+      # 页面默认前缀目录
+      prefix: /WEB-INF/thymeleaf/
+      # 响应页面默认后缀
+      suffix: .html
+      favicon:
+        enabled: false
+#    static-path-pattern: /static/**
 
-
-  #  mvc:
-  #    view:
-  #      # 页面默认前缀目录
-  #      prefix: /WEB-INF/jsp/
-  #      # 响应页面默认后缀
-  #      suffix: .jsp
-
-  thymeleaf:
-    prefix: classpath:/templates/
-    suffix: .html
-    mode: HTML5
-    encoding: UTF-8
-
-#提供给前端的文件访问目录
-  resources:
-#    static-locations: file:G:/word/attachments,file:G:/word/send/attachments/
-    static-locations: classpath:/static/
-
-
-#文档访问的前缀
-doc:
-  path: http://192.168.65.123:8087/
-#外发附件文档访问的前缀
-  sendAttachmentPath: http://192.168.65.123:8087/
-
-mails:
-#  邮件来源地址
-  fromPath: D:/log/
-#  邮件保存地址
-  savePath: G:/word/mail/
-  #  附件保存地址
-  attachmentPath: G:/word/attachments/
-  #  发送邮件保存地址
-  sendPath: G:/word/send/mail/
-  #  发送邮件附件保存地址
-  sendAttachmentPath: G:/word/send/attachments/
-  host: 192.168.79.18
-  username: mail@hwagain.com
-  password: asda2!AC2Q
-  dev: true
-  netPopHost: pop.exmail.qq.com
-  netPopPort: 110
-#  netPopPort: 995
-  netUsername: gzgyb@hwagain.net
-  netPassword: QGB5q214
-  netSmtpHost: smtp.exmail.qq.com
-#  netSmtpPort: 21
-  netSmtpPort: 465
-
-
-oa:
-# 邮件OA流程
-  mail: 16f3eca38f964a418afa91c9e597a54a
-  authority: 0e9eafb9dc894232b837541670282bea
-
-
-# AES加密 16位
-aesKey: 12hwagain-mail56
-
-decrypt:
-  upload: http://10.0.216.200:8090/DecryptFileToPhone.aspx
-  download: http://10.0.216.200:8090/OaFiles/
-
-otherDb:
-  url: jdbc:sqlserver://192.168.68.202:1433; DatabaseName=林地系统
-  url2: jdbc:sqlserver://192.168.68.202:1433; DatabaseName=手机GPS考勤系统
-  userName: sa
-  passWord: zlserver2006
-#  url: jdbc:sqlserver://192.168.68.110:1433; DatabaseName=林地系统
-#  url2: jdbc:sqlserver://192.168.68.110:1433; DatabaseName=手机GPS考勤系统
-#  userName: huangdonghai
-#  passWord: ebt_65_sk
-
-  OAUrl: jdbc:sqlserver://192.168.68.78:1433; DatabaseName=C6
-  OAUsername: pxoa
-  OAPassword: 123456
-
-  mailUrl: jdbc:mysql://192.168.79.18:3306/eyou_mail?createDatabaseIfNotExist=true&useSSL=true&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&autoReconnect=true&failOverReadOnly=false&serverTimezone=Asia/Shanghai
-  mailUsername: lihx
-  mailPassword: Lhx#2019
-
-  mysqlUrl: jdbc:mysql://192.168.68.204:3306/mail?createDatabaseIfNotExist=true&useSSL=true&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&autoReconnect=true&failOverReadOnly=false&serverTimezone=Asia/Shanghai
-  mysqlUsername: sit
-  mysqlPassword: abc-123
-
-  orglUrl: jdbc:mysql://10.0.82.96:3306/hwagain_orgsys_db?createDatabaseIfNotExist=true&useSSL=true&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&autoReconnect=true&failOverReadOnly=false&serverTimezone=Asia/Shanghai
-  orgUsername: hwtmp
-  orgPassword: hwtmp2019
-
-  PSUrl: jdbc:oracle:thin:@192.168.68.102:1521:HCUAT
-  PSUsername: SYSADM
-  PSPassword: SYSADM
-
-
-memcache:
-#  ip: 192.168.65.123
-  ip: 192.168.79.18
-#  port: 11211
-  fixPort: 11231
-  hotPort: 11251
-#  port: 11311
-
-
-
+#  resources:
+#     static-locations: /WEB-INF/js/**
 
