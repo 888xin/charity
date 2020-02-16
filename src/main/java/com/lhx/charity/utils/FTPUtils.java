@@ -1,4 +1,4 @@
-//package com.lhx.charity.utils;
+package com.lhx.charity.utils;//package com.lhx.charity.utils;
 //
 //import java.io.File;
 //import java.io.FileInputStream;

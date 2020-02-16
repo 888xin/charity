@@ -9,7 +9,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-  <title>AdminLTE 3 | Starter</title>
+  <title>爱心之桥|开始</title>
 
   <!-- Font Awesome Icons -->
   <!--<link th:href="@{/plugins/fontawesome-free/css/all.min.css}" rel="stylesheet" />-->
@@ -31,10 +31,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">主页</a>
+        <a href="#" th:href="@{/starter}" class="nav-link">主页</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">联系我们</a>
+        <a href="#" th:href="@{/contacts}" class="nav-link">联系我们</a>
       </li>
     </ul>
 
@@ -151,7 +151,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <a href="index3.html" class="brand-link">
       <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
-      <span class="brand-text font-weight-light">xxx慈善管理平台</span>
+      <span class="brand-text font-weight-light">爱心之桥</span>
     </a>
 
     <!-- Sidebar -->
@@ -161,9 +161,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <div class="image">
           <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
-        <div class="info">
-          <a href="#" class="d-block">未登录</a>
+        <div class="info" th:switch = "${session.userName == null}">
+          <a href="#" th:href="@{/}" th:case="true" class="d-block">未登录</a>
+          <a href="" th:case="false" class="d-block" th:text="${session.userName}">已登录</a>
         </div>
+
       </div>
 
       <!-- Sidebar Menu -->
@@ -171,16 +173,67 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          <li class="nav-item has-treeview menu-open">
-            <a href="#" class="nav-link active">
+          <li class="nav-item">
+            <a href="#" th:href="@{/starter}" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 开始页面
               </p>
             </a>
-
           </li>
-          <li class="nav-item">
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-child"></i>
+              <p>
+                关爱学童
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" th:href="@{/data}" class="nav-link">
+                  <i class="far fa-heart nav-icon"></i>
+                  <p>候选对象</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" th:href="@{/data}" class="nav-link">
+                  <i class="far fa-heart nav-icon"></i>
+                  <p>正在资助</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" th:href="@{/data}" class="nav-link">
+                  <i class="far fa-heart nav-icon"></i>
+                  <p>历史档案</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-handshake"></i>
+              <p>
+                恩山义海
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" th:href="@{/calendar}" class="nav-link">
+                  <i class="far fa-star nav-icon"></i>
+                  <p>企业资助</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" th:href="@{/calendar}" class="nav-link">
+                  <i class="far fa-star nav-icon"></i>
+                  <p>个人资助</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
@@ -203,6 +256,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </li>
             </ul>
           </li>
+          <li class="nav-item">
+            <a href="#" th:href="@{/contacts}" class="nav-link">
+              <i class="nav-icon fas fa-volume-control-phone"></i>
+              <p>
+                联系我们
+              </p>
+            </a>
+          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
@@ -217,43 +278,43 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">主页</h1>
+            <h1 class="m-0 text-dark">欢迎光临</h1>
           </div><!-- /.col -->
-          <!--<div class="col-sm-6">-->
-            <!--<ol class="breadcrumb float-sm-right">-->
-              <!--<li class="breadcrumb-item"><a href="#">Home</a></li>-->
-              <!--<li class="breadcrumb-item active">Starter Page</li>-->
-            <!--</ol>-->
-          <!--</div>&lt;!&ndash; /.col &ndash;&gt;-->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#" th:href="@{/starter}">主页</a></li>
+              <li class="breadcrumb-item active">开始</li>
+            </ol>
+          </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
 
     <!-- Main content -->
-    <div class="content">
-      <div class="container-fluid">
-        <div class="row">
+    <!--<div class="content">-->
+      <!--<div class="container-fluid">-->
+        <!--<div class="row">-->
 
-          <!-- /.col-md-6 -->
-          <div class="col-lg-12">
-            <div class="card">
-              <div class="card-header">
-                <h5 class="m-0">请登录</h5>
-              </div>
-              <div class="card-body">
-                <h6 class="card-title">Special title treatment</h6>
+          <!--&lt;!&ndash; /.col-md-6 &ndash;&gt;-->
+          <!--<div class="col-lg-12">-->
+            <!--<div class="card">-->
+              <!--<div class="card-header">-->
+                <!--<h5 class="m-0">请登录</h5>-->
+              <!--</div>-->
+              <!--<div class="card-body">-->
+                <!--<h6 class="card-title">Special title treatment</h6>-->
 
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">登录</a>
-              </div>
-            </div>
-          </div>
-          <!-- /.col-md-6 -->
-        </div>
-        <!-- /.row -->
-      </div><!-- /.container-fluid -->
-    </div>
+                <!--<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>-->
+                <!--<a href="#" class="btn btn-primary">登录</a>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--&lt;!&ndash; /.col-md-6 &ndash;&gt;-->
+        <!--</div>-->
+        <!--&lt;!&ndash; /.row &ndash;&gt;-->
+      <!--</div>&lt;!&ndash; /.container-fluid &ndash;&gt;-->
+    <!--</div>-->
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->

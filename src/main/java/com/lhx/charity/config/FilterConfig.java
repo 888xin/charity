@@ -1,4 +1,4 @@
-//package com.hwagain.mail.config;
+package com.lhx.charity.config;//package com.hwagain.mail.config;
 //
 //import org.springframework.boot.web.servlet.FilterRegistrationBean;
 //import org.springframework.context.annotation.Bean;

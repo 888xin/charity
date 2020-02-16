@@ -1,4 +1,4 @@
-//package com.hwagain.mail.config;
+package com.lhx.charity.config;//package com.hwagain.mail.config;
 //
 //import com.hwagain.mail.entity.SysPer;
 //import com.hwagain.mail.utils.Constants;

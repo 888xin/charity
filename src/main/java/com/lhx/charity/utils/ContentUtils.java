@@ -105,7 +105,7 @@ public class ContentUtils {
     public static Date localDateToUdate(LocalDate localDate) {
         ZoneId zone = ZoneId.systemDefault();
         Instant instant = localDate.atStartOfDay().atZone(zone).toInstant();
-        java.util.Date date = Date.from(instant);
+        Date date = Date.from(instant);
         return date;
     }
 

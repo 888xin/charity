@@ -1,4 +1,4 @@
-//package com.lhx.charity.entity;
+package com.lhx.charity.entity;//package com.lhx.charity.entity;
 //
 //import io.swagger.annotations.ApiModel;
 //import io.swagger.annotations.ApiModelProperty;

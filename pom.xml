@@ -76,17 +76,17 @@
 
 
     <dependencies>
-        <!--<dependency>-->
-            <!--<groupId>org.springframework.boot</groupId>-->
-            <!--<artifactId>spring-boot-starter-thymeleaf</artifactId>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
         <!--<dependency>-->
-            <!--<groupId>org.springframework.boot</groupId>-->
-            <!--<artifactId>spring-boot-starter-data-redis</artifactId>-->
+        <!--<groupId>org.springframework.boot</groupId>-->
+        <!--<artifactId>spring-boot-starter-data-redis</artifactId>-->
         <!--</dependency>-->
 
         <dependency>
@@ -125,43 +125,6 @@
             <scope>provided</scope>
         </dependency>
 
-
-
-        <!-- Swagger -->
-        <!--<dependency>-->
-            <!--<groupId>io.springfox</groupId>-->
-            <!--<artifactId>springfox-swagger-ui</artifactId>-->
-            <!--<version>${springfox-swagger-ui.version}</version>-->
-        <!--</dependency>-->
-
-        <!--<dependency>-->
-            <!--<groupId>io.springfox</groupId>-->
-            <!--<artifactId>springfox-swagger2</artifactId>-->
-            <!--<version>${springfox-swagger-ui.version}</version>-->
-        <!--</dependency>-->
-
-        <!--weixin mp-->
-        <!--<dependency>-->
-            <!--<groupId>com.github.binarywang</groupId>-->
-            <!--<artifactId>weixin-java-mp</artifactId>-->
-            <!--<version>${weixin-java-mp.version}</version>-->
-        <!--</dependency>-->
-
-        <!--百度人工智能-->
-        <!--<dependency>-->
-            <!--<groupId>com.baidu.aip</groupId>-->
-            <!--<artifactId>java-sdk</artifactId>-->
-            <!--<version>4.10.0</version>-->
-        <!--</dependency>-->
-
-      <!--jsp-->
-        <!--<dependency>-->
-            <!--<groupId>javax.servlet</groupId>-->
-            <!--<artifactId>jstl</artifactId>-->
-            <!--<scope>provided</scope>-->
-        <!--</dependency>-->
-
-
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
@@ -180,7 +143,6 @@
             <artifactId>jstl</artifactId>
             <!--<scope>provided</scope>-->
         </dependency>
-
 
     </dependencies>
 

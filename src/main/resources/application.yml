@@ -15,18 +15,16 @@ spring:
         dialect: org.hibernate.dialect.MySQL5Dialect
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
-    time-zone: UTC
+    time-zone: GMT+8
 
-  mvc:
-    view:
-      # 页面默认前缀目录
-      prefix: /WEB-INF/thymeleaf/
-      # 响应页面默认后缀
-      suffix: .html
-      favicon:
-        enabled: false
-#    static-path-pattern: /static/**
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML5
+    encoding: UTF-8
 
-#  resources:
-#     static-locations: /WEB-INF/js/**
+  #提供给前端的文件访问目录
+  resources:
+    #    static-locations: file:G:/word/attachments,file:G:/word/send/attachments/
+    static-locations: classpath:/static/
 

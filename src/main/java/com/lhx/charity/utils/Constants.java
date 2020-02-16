@@ -8,7 +8,8 @@ public class Constants {
 
     public static final int BAD = 1001;
     public static final int INIT = 0;
-    public static final String IS_PAY = "已支付";
+    public static final String USERNAME = "userName";
+    public static final String MSG = "msg";
     //无权限
     public static final int NO_AUTHORITY = 1002;
     public static final int NO_LOGIN_CODE = 1003;

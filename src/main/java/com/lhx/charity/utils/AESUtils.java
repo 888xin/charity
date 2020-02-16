@@ -1,4 +1,4 @@
-//package com.lhx.charity.utils;
+package com.lhx.charity.utils;//package com.lhx.charity.utils;
 //
 //import javax.crypto.Cipher;
 //import javax.crypto.spec.SecretKeySpec;

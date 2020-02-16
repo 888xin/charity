@@ -1,4 +1,4 @@
-//package com.lhx.charity.controller;
+package com.lhx.charity.controller;//package com.lhx.charity.controller;
 //
 //import com.lhx.charity.entity.FileVo;
 //import com.lhx.charity.utils.Constants;
