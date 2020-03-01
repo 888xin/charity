@@ -144,6 +144,14 @@
             <!--<scope>provided</scope>-->
         </dependency>
 
+
+        <!--百度人工智能-->
+        <dependency>
+            <groupId>com.baidu.aip</groupId>
+            <artifactId>java-sdk</artifactId>
+            <version>4.10.0</version>
+        </dependency>
+
     </dependencies>
 
     <build>

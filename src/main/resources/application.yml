@@ -3,9 +3,9 @@ spring:
     active: product
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://43.247.68.17:3306/sq_8888xin?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
-    username: sq_8888xin
-    password: bbx0010
+    url: jdbc:mysql://60.12.121.115:3306/sq_888xin21?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    username: sq_888xin21
+    password: alb753
   jpa:
     hibernate:
       ddl-auto: update
